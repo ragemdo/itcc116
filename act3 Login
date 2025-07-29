@@ -30,7 +30,7 @@ class LoginScreenHome extends StatelessWidget {
                       CircleAvatar(
                         radius: 80.0,
                         backgroundImage: NetworkImage(
-                            'https://www.imdb.com/name/nm1102577/mediaviewer/rm3423196161/?ref_=nm_ov_ph'),
+                            'https://hips.hearstapps.com/hmg-prod/images/elle-fanning-attends-the-2024-met-gala-celebrating-sleeping-news-photo-1715042420.jpg?resize=1200:*'),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -41,10 +41,18 @@ class LoginScreenHome extends StatelessWidget {
                         ),
                       ),
                       TextField(
-
+                        decoration: InputDecoration(
+                          label: Text('Username'),
+                          border: OutlineInputBorder(),
+                          prefixIcon: Icon(Icons.person_outline),
+                        ),
                       ),
                       TextField(
-                        
+                        decoration: InputDecoration(
+                          label: Text('Username'),
+                          border: OutlineInputBorder(),
+                          prefixIcon: Icon(Icons.person_outline),
+                        ),
                       ),
                       ElevatedButton(onPressed: () {}, child: Text('LOGIN')),
                       Row(
