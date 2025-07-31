@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'LoginScreen.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class SignUpScreenHome extends StatelessWidget {
                 width: 300,
                 child: Card(
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -34,60 +35,75 @@ class SignUpScreenHome extends StatelessWidget {
                               'https://hips.hearstapps.com/hmg-prod/images/elle-fanning-attends-the-2024-met-gala-celebrating-sleeping-news-photo-1715042420.jpg?resize=1200:*'),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(6.0),
                           child: Text(
-                            'Please Login',
+                            'Create a Account',
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                            label: Text('I.D Number'),
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.card_membership),
-                          ),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            label: Text('Full Name'),
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.password),
-                            suffixIcon: IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.text_fields)),
-                          ),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            label: Text('Username'),
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.password),
-                            suffixIcon: IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.remove_red_eye_outlined)),
-                          ),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            label: Text('Password'),
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.password),
-                            suffixIcon: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.password)),
-                          ),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            label: Text('Confirmed Password'),
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.password),
-                            suffixIcon: IconButton(
-                                onPressed: () {}, icon: Icon(Icons.password)),
+                        Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              label: Text('I.D Number'),
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.card_membership),
+                            ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
+                          padding: const EdgeInsets.all(6.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              label: Text('Full Name'),
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.password),
+                              suffixIcon: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.text_fields)),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              label: Text('Username'),
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.password),
+                              suffixIcon: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.remove_red_eye_outlined)),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              label: Text('Password'),
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.password),
+                              suffixIcon: IconButton(
+                                  onPressed: () {}, icon: Icon(Icons.password)),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              label: Text('Confirmed Password'),
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.password),
+                              suffixIcon: IconButton(
+                                  onPressed: () {}, icon: Icon(Icons.password)),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6.0),
                           child: SizedBox(
                               width: MediaQuery.of(context).size.width,
                               height: 40,
@@ -105,7 +121,13 @@ class SignUpScreenHome extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('No Account'),
-                            TextButton(onPressed: () {}, child: Text('SIGNUP'))
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          LoginScreen()));
+                                },
+                                child: Text('Log in'))
                           ],
                         )
                       ],
