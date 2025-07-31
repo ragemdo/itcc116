@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'SignUpScreen.dart'; // ✅ Import SignUpScreen here
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -51,6 +50,7 @@ class LoginScreenHome extends StatelessWidget {
                           ),
                         ),
                         TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             label: Text('Password'),
                             border: OutlineInputBorder(),
@@ -79,7 +79,17 @@ class LoginScreenHome extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('No Account'),
-                            TextButton(onPressed: () {}, child: Text('SIGNUP'))
+                            TextButton(
+                              onPressed: () {
+                                // ✅ Navigate to SignUpScreen
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SignUpScreen()),
+                                );
+                              },
+                              child: Text('SIGNUP'),
+                            ),
                           ],
                         )
                       ],
